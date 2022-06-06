@@ -1,6 +1,7 @@
 <template>
   <headerComponent />
-  <h1>Add Restaurant</h1>
+  <img class="logo" :src="reso_logo" alt="" />
+  <h2>Add Restaurant</h2>
   <div>
     <form action="">
         <input type="text" v-model="restaurant.name" placeholder="Enter Name" />
@@ -8,15 +9,14 @@
         <input type="text" v-model="restaurant.contact" placeholder="Enter Contact" />
         <button type="button" v-on:click="add()">Add Restaurant</button>
     </form>
-    <!-- <p>
-      <router-link to="login">Login</router-link>
-    </p> -->
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import headerComponent from './header.vue'
+import logo from "../assets/resto_logo.jpg";
+
 export default {
     name:'addComponent',
     components:{headerComponent},
@@ -26,7 +26,8 @@ export default {
                     name: "",
                     address: "",
                     contact: "",
-      },
+                  },
+            reso_logo: logo,
         }
     },
     methods:{
@@ -49,4 +50,9 @@ export default {
 h1{
   padding-top:50px
 }
+h2{
+  font-size: 40px;
+  color: rgb(34, 31, 31);
+  font-style: italic;
+};
 </style>

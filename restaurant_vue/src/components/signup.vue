@@ -1,6 +1,6 @@
 <template>
-  <headerComponent />
-  <h1>Sign Up</h1>
+<img class="logo" :src="reso_logo" alt="">
+  <h2>Sign Up</h2>
   <form action="">
   <div>
     <input type="text" v-model="name" placeholder="Enter Name" />
@@ -8,7 +8,7 @@
     <input type="password" v-model="password" placeholder="Enter Password" />
     <button type="button" v-on:click="signup()">Sign Up</button>
     <p>
-      <router-link to="login">Login</router-link>
+      <router-link to="login">Already have an account? Login</router-link>
     </p>
   </div>
   </form>
@@ -16,16 +16,17 @@
 
 <script>
 import axios from 'axios'
-import headerComponent from './header.vue'
+import logo from '../assets/resto_logo.jpg'
+
 
 export default {
     name:'sigupComponent',
-    components:{headerComponent},
     data(){
         return{
             name:'',
             email:'',
-            password:''
+            password:'',
+            reso_logo:logo
         }
     },
     methods:{
@@ -53,5 +54,9 @@ export default {
 </script>
 
 <style scoped>
-
+h2{
+  font-size: 40px;
+  color: rgb(34, 31, 31);
+  font-style: italic;
+}
 </style>

@@ -1,8 +1,7 @@
 <template>
     <div class='nav'>
       <router-link to="/">Home</router-link>
-    <router-link v-on:click="logout" to="#" v-if="setlogin">Logout</router-link>
-      <router-link to="/login" v-else>Login</router-link>
+    <router-link v-on:click="logout" to="#">Logout</router-link>
       <router-link to="/add">Add Restaurant</router-link>
       <!-- <router-link to="/add">Add Restaurant</router-link> -->
 

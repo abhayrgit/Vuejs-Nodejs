@@ -23,7 +23,7 @@ body{
   margin: 0;
 }
 .logo {
-  padding-top: 50px;
+  padding-top: 70px;
   width: 100px;
 }
 input {
